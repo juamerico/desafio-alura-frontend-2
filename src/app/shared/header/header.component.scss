@@ -1,0 +1,77 @@
+@import "variables";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 12rem;
+  @include tablet {
+    gap: 4rem;
+  }
+
+  &__search-bar {
+    @include phone {
+      display: none;
+    }
+
+    box-sizing: content-box;
+    padding: 1rem;
+    width: 100%;
+    height: 4rem;
+    border: none;
+    background: $input-color;
+    border-radius: 8px;
+    font-family: $standard-font;
+    color: $input-text;
+    transition: 400ms;
+
+    &:hover {
+      background: $input-color-hover;
+    }
+    &::placeholder {
+      color: $placeholder-color;
+    }
+  }
+
+  &__icon {
+    display: flex;
+    gap: 2.25rem;
+    justify-content: space-between;
+    align-items: center;
+    @include desktop {
+      display: none;
+    }
+
+    &__search--link {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__user {
+    @include phone {
+      display: none;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    &__img {
+      width: 3rem;
+      border-radius: 50%;
+    }
+
+    &__name {
+      color: $text-color;
+      font-family: $standard-font;
+      font-size: 1.5rem;
+    }
+  }
+}
