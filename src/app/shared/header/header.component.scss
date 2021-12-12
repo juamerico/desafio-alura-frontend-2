@@ -1,17 +1,43 @@
 @import "variables";
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  gap: 12rem;
+  @include phone {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 12rem;
+  }
+
   @include tablet {
     gap: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 12rem;
+  }
+
+  @include desktop {
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: 0.5fr 1.9fr 0.6fr;
+  }
+
+  &__logo {
+    @include desktop {
+      grid-column: 1 / 2;
+    }
   }
 
   &__search-bar {
     @include phone {
       display: none;
+    }
+
+    @include desktop {
+      grid-column: 2 / 3;
+      place-self: center;
     }
 
     box-sizing: content-box;
@@ -58,6 +84,7 @@
       display: none;
     }
 
+    grid-column: 3 / 4;
     display: flex;
     justify-content: space-between;
     align-items: center;
