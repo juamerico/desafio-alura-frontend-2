@@ -1,8 +1,2 @@
 @import "variables";
 
-body {
-  @include desktop {
-    display: grid;
-    grid-template-columns: 0.5fr 1.9fr 0.6fr;
-  }
-}

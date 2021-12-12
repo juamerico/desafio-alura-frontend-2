@@ -18,6 +18,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+  display: unset;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -51,8 +52,16 @@ table {
 
 // styles.scss
 
-html {
-  background-color: $background-color;
-  font-size: 62.5%;
+app-root * {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 0.6fr;
+    gap: 2rem;
+  }
 }
 
+html {
+  background-color: $background-color;
+  padding: 2rem;
+  font-size: 62.5%;
+}
