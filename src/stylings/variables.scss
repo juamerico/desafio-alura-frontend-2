@@ -7,6 +7,7 @@ $input-color-hover: rgba(255, 255, 255, 0.20);
 $input-text: rgba(255, 255, 255, 0.80);
 $placeholder-color: rgba(255, 255, 255, 0.64);
 $standard-font: 'Inter', sans-serif;
+$button-color: #5081FB;
 
 @mixin phone {
   @media (max-width: 375px) {@content}

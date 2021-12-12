@@ -1,3 +1,4 @@
+import { NavigationMenuModule } from './shared/navigation-menu/navigation-menu.module';
 import { HeaderModule } from './shared/header/header.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +13,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HeaderModule
+    HeaderModule,
+    NavigationMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

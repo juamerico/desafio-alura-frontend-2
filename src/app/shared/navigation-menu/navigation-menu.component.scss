@@ -1,0 +1,51 @@
+@import "variables";
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  height: auto;
+
+  &__title {
+    color: $text-color;
+    font-family: $standard-font;
+    font-size: 1rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+  }
+
+  &__link {
+    display: flex;
+    opacity: 1;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    &:active {
+      text-decoration: none;
+    }
+
+    &--code {
+      background: url("../../../assets/code-icon.svg") no-repeat center;
+    }
+
+    &--community {
+      background: url("../../../assets/community-icon.svg") no-repeat center;
+    }
+
+    &--code, &--community {
+      padding: 2.5rem;
+      background-color: $button-color;
+      border-radius: 16px;
+    }
+
+    &--text {
+      color: $text-color;
+      font-family: $standard-font;
+      font-size: 1.5rem;
+    }
+  }
+}
