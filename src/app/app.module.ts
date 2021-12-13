@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NavigationMenuModule } from './shared/navigation-menu/navigation-menu.module';
 import { HeaderModule } from './shared/header/header.module';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
-    NavigationMenuModule
+    NavigationMenuModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
