@@ -75,33 +75,4 @@
       }
     }
   }
-
-  &__user {
-    @include phone {
-      display: none;
-    }
-
-    @include tablet {
-      display: none;
-    }
-
-    grid-column: 3 / 4;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 1rem;
-
-    &__img {
-      width: 3rem;
-      border-radius: 50%;
-      display: block;
-    }
-
-    &__name {
-      color: $text-color;
-      font-family: $standard-font;
-      font-size: 1.5rem;
-      width: min-content;
-    }
-  }
 }

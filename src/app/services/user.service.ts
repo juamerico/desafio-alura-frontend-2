@@ -1,7 +1,7 @@
 import { User } from '../models/user';
 import { Injectable } from '@angular/core';
-import { first, map, Observable, switchMap } from 'rxjs';
-import { HttpClient } from "@angular/common/http"
+import { Observable } from 'rxjs';
+import { HttpClient, HttpHeaders } from "@angular/common/http"
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getFullName(userName: string): Observable<any> {
-    return this.httpClient.get<User>(`https://api.github.com/users/${userName}`)
+  public apiCall(userName: string): Observable<User> {
+    return this.httpClient.get<any>(`https://api.github.com/users/${userName}`)
   }
 }
