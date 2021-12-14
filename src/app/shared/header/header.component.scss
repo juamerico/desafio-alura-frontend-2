@@ -3,7 +3,6 @@
 .header {
   @include phone {
     width: 100%;
-    padding: 2rem;
     display: flex;
     justify-content: space-between;
     gap: 12rem;
@@ -11,11 +10,10 @@
 
   @include tablet {
     gap: 4rem;
-    width: 100%;
-    padding: 2rem;
+    width: auto;
     display: flex;
     justify-content: space-between;
-    gap: 12rem;
+    gap: 3rem;
   }
 
   @include desktop {
@@ -65,6 +63,7 @@
     gap: 2.25rem;
     justify-content: space-between;
     align-items: center;
+
     @include desktop {
       display: none;
     }
@@ -72,6 +71,12 @@
     &__search--link {
       @include tablet {
         display: none;
+      }
+    }
+
+    &__menu--link {
+      @include tablet {
+        justify-self: flex-end;
       }
     }
   }
