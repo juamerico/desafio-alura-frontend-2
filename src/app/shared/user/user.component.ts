@@ -14,7 +14,8 @@ export class UserComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    const githubUserNamer = prompt("Qual seu nome de usuário no Github?")
+    //const githubUserNamer = prompt("Qual seu nome de usuário no Github?")
+    const githubUserNamer = " "
 
     if (!githubUserNamer || !githubUserNamer.trim()) {
       this.userName = "Anônimo(a)"

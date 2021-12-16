@@ -3,15 +3,6 @@
 
 // styles.scss
 
-app-root * {
-  @include desktop {
-    width: auto;
-    display: grid;
-    grid-template-columns: 0.5fr 1.5fr 0.6fr;
-    gap: 2.5rem;
-  }
-}
-
 html {
   background-color: $background-color;
   padding: 2rem;

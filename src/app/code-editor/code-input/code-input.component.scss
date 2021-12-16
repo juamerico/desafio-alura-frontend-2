@@ -1,0 +1,15 @@
+@import "variables";
+
+.ci {
+  display: flex;
+
+  &__frame {
+    width: 100%;
+    background-color: $frame-color;
+    border-radius: 8px;
+  }
+}
+
+.highlight-btn {
+  background-color: $button-color;
+}

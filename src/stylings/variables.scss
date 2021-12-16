@@ -8,6 +8,7 @@ $input-text: rgba(255, 255, 255, 0.80);
 $placeholder-color: rgba(255, 255, 255, 0.64);
 $standard-font: 'Inter', sans-serif;
 $button-color: #5081FB;
+$frame-color: #6BD1FF;
 
 @mixin phone {
   @media (max-width: 375px) {@content}
