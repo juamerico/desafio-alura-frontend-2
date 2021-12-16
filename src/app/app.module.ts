@@ -6,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CodeEditorModule } from './code-editor/code-editor.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
+    CodeEditorModule,
     NavigationMenuModule,
     HttpClientModule
   ],

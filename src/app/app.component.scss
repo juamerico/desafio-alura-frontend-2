@@ -1,2 +1,24 @@
 @import "variables";
 
+.app-component {
+  @include desktop {
+    width: auto;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 0.6fr;
+    gap: 2.5rem;
+  }
+}
+
+app-header {
+  grid-column: 1 / span 3;
+}
+
+app-navigation-menu {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+router-outlet {
+  grid-column: 1;
+  grid-row: 2;
+}
