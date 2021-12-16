@@ -14,13 +14,13 @@ export class UserComponent implements OnInit {
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    //const githubUserNamer = prompt("Qual seu nome de usuário no Github?")
-    const githubUserNamer = " "
+    //const githubUserName = prompt("Qual seu nome de usuário no Github?")
+    const githubUserName = " "
 
-    if (!githubUserNamer || !githubUserNamer.trim()) {
+    if (!githubUserName || !githubUserName.trim()) {
       this.userName = "Anônimo(a)"
     } else {
-      this.userService.apiCall(githubUserNamer.trim())
+      this.userService.apiCall(githubUserName.trim())
         .subscribe((res: User) => {
           this.userName = res["name"]
           this.avatar_url = res["avatar_url"]
