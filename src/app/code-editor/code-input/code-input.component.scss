@@ -2,14 +2,69 @@
 
 .ci {
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
 
   &__frame {
     width: 100%;
+    min-height: 40rem;
     background-color: $frame-color;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+      width: 90%;
+      height: 85%;
+      border-radius: 8px;
+      background-color: $frame-inner-color;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
+pre {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: url("../../../assets/mac_buttons.svg") no-repeat;
+  background-position: left 1rem top 1rem;
+}
+
+.code-input {
+  width: 98%;
+  height: 85%;
+  margin-bottom: 0.5rem;
+  font-family: $code-font;
+  color: $text-color;
+  font-size: 1.4rem;
+  outline: none;
+}
+
 .highlight-btn {
-  background-color: $button-color;
+  background-color: $dark-button-color;
+  font-style: $standard-font;
+  font-size: 1.6rem;
+  color: $text-color;
+  width: auto;
+  height: 5.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 400ms;
+
+  &:hover {
+    background-color: $dark-button-color-hover;
+  }
+
+  &:active {
+    background-color: $dark-button-color-action;
+  }
 }

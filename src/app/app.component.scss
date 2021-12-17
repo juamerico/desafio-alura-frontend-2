@@ -1,6 +1,10 @@
 @import "variables";
 
 .app-component {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
   @include desktop {
     width: auto;
     display: grid;
