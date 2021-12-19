@@ -1,0 +1,20 @@
+@import "variables";
+
+::-webkit-scrollbar {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: $input-color;
+
+  &-thumb {
+    background-color: $input-color-hover;
+    border-radius: 0.5rem;
+  }
+
+  &-corner {
+    background-color: $input-color-hover;
+  }
+
+  &-button {
+    display: none;
+  }
+}
