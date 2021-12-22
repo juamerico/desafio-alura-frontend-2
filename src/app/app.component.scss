@@ -22,7 +22,7 @@ app-navigation-menu {
   grid-row: 2;
 }
 
-router-outlet {
-  grid-column: 1;
-  grid-row: 2;
+.main {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
 }

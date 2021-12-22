@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NavigationMenuModule } from './shared/navigation-menu/navigation-menu.module';
 import { HeaderModule } from './shared/header/header.module';
 import { NgModule } from '@angular/core';
@@ -15,10 +15,10 @@ import { CodeEditorModule } from './code-editor/code-editor.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     HeaderModule,
     CodeEditorModule,
     NavigationMenuModule,
-    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

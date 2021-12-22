@@ -1,4 +1,23 @@
-.code-input {
-  grid-area: 2 / 2 / 3 / 3;
-  display: flex;
+@import "variables";
+
+.container {
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1.5fr 0.6fr;
+    gap: 2.5rem;
+  }
+}
+
+app-code-input {
+
+  @include desktop {
+    grid-column: 1 / 2;
+  }
+}
+
+app-code-menu {
+
+  @include desktop {
+    grid-column: 2 / 3;
+  }
 }
