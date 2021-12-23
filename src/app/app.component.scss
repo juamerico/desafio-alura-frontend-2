@@ -3,13 +3,13 @@
 .app-component {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 4rem;
 
   @include desktop {
     width: auto;
     display: grid;
     grid-template-columns: 0.5fr 1.5fr 0.6fr;
-    gap: 2.5rem;
+    gap: 4rem;
   }
 }
 

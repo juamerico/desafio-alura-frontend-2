@@ -1,0 +1,53 @@
+@import "variables";
+
+.code-menu {
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    & * {
+      width: 100%;
+    }
+
+    &:nth-child(2) {
+      margin: 4rem 0;
+    }
+  }
+
+  &__title {
+    color: $text-color;
+    font-family: $standard-font;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  &__input--description {
+    height: 8rem !important;
+    resize: none;
+  }
+
+  &__input--language > * {
+    background-color: $background-color;
+  }
+
+  &__input--color {
+    background-color: unset !important;
+    border: 1px white solid;
+    padding: 0.3rem !important;
+  }
+
+  &__submit {
+    height: 5rem;
+    background-color: $button-color;
+    border-radius: 8px;
+    border: none;
+    color: $background-color;
+    font-size: 1.6rem;
+  }
+}
