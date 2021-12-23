@@ -4,7 +4,15 @@
   display: flex;
   flex-direction: column;
 
-  &__container {
+  @include phone {
+    margin-top: 4rem;
+  }
+
+  @include tablet {
+    margin-top: 4rem;
+  }
+
+  &__container--project, &__container--personalization {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -13,10 +21,22 @@
     & * {
       width: 100%;
     }
+  }
 
-    &:nth-child(2) {
-      margin: 4rem 0;
+  &__container--personalization {
+    margin: 4rem 0;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 3rem;
     }
+  }
+
+  &__input--description {
+    height: 8rem !important;
+    resize: none;
   }
 
   &__title {
@@ -25,21 +45,33 @@
     font-size: 1rem;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
+
+    @include tablet {
+      place-self: end;
+    }
   }
 
-  &__input--description {
-    height: 8rem !important;
-    resize: none;
-  }
+  &__input--language {
+    @include tablet {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+    }
 
-  &__input--language > * {
-    background-color: $background-color;
+    & > * {
+      background-color: $background-color;
+
+    }
   }
 
   &__input--color {
     background-color: unset !important;
     border: 1px white solid;
     padding: 0.3rem !important;
+
+    @include tablet {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+    }
   }
 
   &__submit {
