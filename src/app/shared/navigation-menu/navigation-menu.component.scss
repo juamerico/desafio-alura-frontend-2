@@ -27,7 +27,7 @@
 
   &__link {
     display: flex;
-    opacity: 1;
+    opacity: 0.75;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
@@ -58,4 +58,8 @@
       display: block;
     }
   }
+}
+
+.active {
+  opacity: 1;
 }
