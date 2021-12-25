@@ -81,5 +81,11 @@
     border: none;
     color: $background-color;
     font-size: 1.6rem;
+    cursor: pointer;
+    transition: 400ms;
+
+    &:hover {
+      background-color: $button-color-hover;
+    }
   }
 }
