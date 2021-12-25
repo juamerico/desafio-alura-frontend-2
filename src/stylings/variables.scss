@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono&display=swap');
 
-$background-color: #051D3B;
-$text-color: #fff;
-$input-color: rgba(255, 255, 255, 0.16);
-$input-color-hover: rgba(255, 255, 255, 0.20);
-$input-text: rgba(255, 255, 255, 0.80);
-$placeholder-color: rgba(255, 255, 255, 0.64);
-$dark-button-color: rgba(80, 129, 251, 0.08);
-$dark-button-color-hover: rgba(80, 129, 251, 0.15);
-$dark-button-color-action: rgba(80, 129, 251, 0.25);
+$background-color: hsl(213, 84%, 13%);
+$text-color: hsl(0, 0%, 100%);
+$dark-text-color: hsl(0, 0%, 75%);
+$input-color: hsla(0, 0%, 100%, 0.16);
+$input-color-hover: hsla(0, 0%, 100%, 0.2);
+$input-text: hsla(0, 0%, 100%, 0.8);
+$placeholder-color: hsla(0, 0%, 100%, 0.64);
+$button-color: hsl(223, 96%, 65%);
+$dark-button-color: hsla(223, 96%, 65%, 0.08);
+$dark-button-color-hover: hsla(223, 96%, 65%, 0.15);
+$dark-button-color-action: hsla(223, 96%, 65%, 0.25);
 $standard-font: 'Inter', sans-serif;
 $code-font: 'Roboto Mono', monospace;
-$button-color: #5081FB;
-$frame-color: #6BD1FF;
-$frame-inner-color: #141414;
+$frame-color: hsl(199, 100%, 71%);
+$frame-inner-color: hsl(0, 0%, 8%);
 
 @mixin phone {
   @media (max-width: 375px) {@content}

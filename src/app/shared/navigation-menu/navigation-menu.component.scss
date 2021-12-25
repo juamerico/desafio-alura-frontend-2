@@ -27,32 +27,34 @@
 
   &__link {
     display: flex;
-    opacity: 0.75;
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
     text-decoration: none;
+
     &:active {
       text-decoration: none;
     }
 
     &--code {
       background: url("../../../assets/code-icon.svg") no-repeat center;
+      opacity: 0.75;
     }
 
     &--community {
       background: url("../../../assets/community-icon.svg") no-repeat center;
+      opacity: 0.75;
     }
 
     &--code, &--community {
       gap: unset;
       padding: 2.5rem;
-      background-color: $button-color;
+      background-color: $dark-button-color;
       border-radius: 16px;
     }
 
-    &--text {
-      color: $text-color;
+    &__text {
+      color: $dark-text-color;
       font-family: $standard-font;
       font-size: 1.5rem;
       display: block;
@@ -61,5 +63,16 @@
 }
 
 .active {
-  opacity: 1;
+  // ícone
+  :nth-child(1) {
+    background-color: $button-color;
+    opacity: 1;
+  }
+
+  // texto
+  :nth-child(2) {
+    color: $text-color;
+  }
 }
+
+
