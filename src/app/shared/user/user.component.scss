@@ -1,14 +1,6 @@
 @import "variables";
 
 .user {
-  @include phone {
-    display: none;
-  }
-
-  @include tablet {
-    display: none;
-  }
-
   grid-column: 3 / 4;
   display: flex;
   justify-content: flex-end;

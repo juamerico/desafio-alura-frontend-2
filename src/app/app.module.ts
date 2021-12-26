@@ -1,3 +1,4 @@
+import { CommunityModule } from './community/community.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationMenuModule } from './shared/navigation-menu/navigation-menu.module';
 import { HeaderModule } from './shared/header/header.module';
@@ -19,6 +20,7 @@ import { CodeEditorModule } from './code-editor/code-editor.module';
     HeaderModule,
     CodeEditorModule,
     NavigationMenuModule,
+    CommunityModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -63,3 +63,13 @@
     }
   }
 }
+
+app-user {
+  @include phone {
+    display: none;
+  }
+
+  @include tablet {
+    display: none;
+  }
+}

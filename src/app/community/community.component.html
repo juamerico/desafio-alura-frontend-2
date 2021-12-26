@@ -1,1 +1,23 @@
-<p>community works!</p>
+<ng-template>
+  <div class="container">
+    <div class="card">
+      <app-code-output></app-code-output>
+
+      <div class="project">
+        <h3 class="project__title">{{title}}</h3>
+        <p class="project__description">{{description}}</p>
+
+        <div class="social">
+          <div class="social__group">
+            <div class="social__group__comment--icon"></div>
+            <p class="social__group__comment--text">{{comments}}</p>
+            <div class="social__group__like--icon"></div>
+            <p class="social__group__like--text">{{likes}}</p>
+          </div>
+
+          <app-user></app-user>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

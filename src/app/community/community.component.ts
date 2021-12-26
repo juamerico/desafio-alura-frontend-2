@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./community.component.scss']
 })
 export class CommunityComponent implements OnInit {
+  public title = "Título do projeto"
+  public description = "Descrição do projeto"
+  public likes = 0
+  public comments = 0
 
   constructor() { }
 

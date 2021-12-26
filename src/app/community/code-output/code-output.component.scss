@@ -1,0 +1,49 @@
+@import "variables";
+
+.co__frame {
+  @include desktop {
+    width: 100%;
+    height: 100%;
+  }
+
+  height: 50vh;
+  background-color: $frame-color;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__inner {
+    width: 90%;
+    height: 85%;
+    border-radius: 8px;
+    background-color: $frame-inner-color;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+pre {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: url("../../../assets/mac_buttons.svg") no-repeat;
+  background-position: left 1rem top 1rem;
+  overflow: scroll;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.code-output {
+  width: 98%;
+  height: 85%;
+  margin-bottom: 0.5rem;
+  font-family: $code-font;
+  color: $text-color;
+  font-size: 1.4rem;
+  outline: none;
+}

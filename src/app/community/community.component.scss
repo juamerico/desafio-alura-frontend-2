@@ -1,0 +1,78 @@
+@import "variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  height: 80vh;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    height: max(520px, 55vh);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  height: 100%;
+  background-color: $code-card-bg-color;
+}
+
+app-code-output {
+  height: 70%;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: space-around;
+  padding: 1rem;
+
+  &__title, &__description, .social__group__like--text, .social__group__comment--text {
+    font-family: $standard-font;
+    color: $text-color;
+  }
+
+  &__title {
+    font-size: 2.1rem;
+    font-weight: bold;
+  }
+
+  &__description, .social__group__like--text, .social__group__comment--text {
+    font-size: 1.6rem;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__group {
+      width: 50%;
+      display: flex;
+      justify-content: flex-start;
+
+      &__comment--icon, &__like--icon {
+        width: 20%;
+      }
+
+      &__comment--icon {
+        background: url("../../assets/comment-icon.svg") no-repeat center;
+      }
+
+      &__like--icon {
+        background: url("../../assets/like-icon.svg") no-repeat center;
+      }
+
+      &__like--text, &__comment--text {
+        align-self: center;
+      }
+    }
+  }
+}
