@@ -17,6 +17,7 @@ $standard-font: 'Inter', sans-serif;
 $code-font: 'Roboto Mono', monospace;
 $frame-color: hsl(199, 100%, 71%);
 $frame-inner-color: hsl(0, 0%, 8%);
+$hamburger-menu-color: hsl(214, 34%, 27%);
 
 @mixin phone {
   @media (max-width: 375px) {@content}

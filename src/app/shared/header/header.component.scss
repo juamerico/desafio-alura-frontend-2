@@ -51,12 +51,16 @@
     }
 
     &__search--link {
+      cursor: pointer;
+
       @include tablet {
         display: none;
       }
     }
 
     &__menu--link {
+      cursor: pointer;
+
       @include tablet {
         justify-self: flex-end;
       }
@@ -72,4 +76,22 @@ app-user {
   @include tablet {
     display: none;
   }
+}
+
+app-hamburger-menu {
+  width: auto;
+  height: 100vh;
+  position: absolute;
+  transform: translateX(100vw);
+  right: 2rem;
+  top: 10vh;
+  transition: 1000ms;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.active-hamburger-menu {
+  transform: translateX(0);
 }

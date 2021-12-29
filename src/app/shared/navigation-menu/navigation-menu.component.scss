@@ -1,14 +1,6 @@
 @import "variables";
 
 .nav-menu {
-  @include phone {
-    display: none;
-  }
-
-  @include tablet {
-    display: none;
-  }
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

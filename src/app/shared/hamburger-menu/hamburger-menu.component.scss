@@ -1,0 +1,23 @@
+@import "variables";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: lightcoral;
+  border-radius: 8px;
+  background-color: $hamburger-menu-color;
+  padding: 2rem 2rem 4rem 2rem;
+}
+
+.divide {
+  border: 1px solid #fff;
+  opacity: 0.08;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+app-user {
+  place-self: flex-start;
+}
