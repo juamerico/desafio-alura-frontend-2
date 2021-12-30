@@ -25,6 +25,7 @@
       class="header__icon__menu--link"
       src="assets/menu-icon.svg"
       alt="Abrir menu"
+      (click)="activeHamburgerMenu = !activeHamburgerMenu"
     />
   </div>
 
@@ -32,5 +33,9 @@
   <app-user></app-user>
 
   <!-- menu hamburger -->
-  <app-hamburger-menu ngClass=""></app-hamburger-menu>
+  <app-hamburger-menu [ngClass]="{
+    'active-hamburger-menu': activeHamburgerMenu,
+    'disabled-hamburger-menu': !activeHamburgerMenu
+    }">
+  </app-hamburger-menu>
 </header>
