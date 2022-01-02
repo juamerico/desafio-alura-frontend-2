@@ -1,17 +1,21 @@
-<div class="container">
-  <div class="ci">
-    <div class="ci__frame">
-      <div class="ci__frame__inner">
-        <pre>
-          <code class="code-input" spellcheck="false" contenteditable="true"></code>
-        </pre>
+<form class="form">
+
+  <div class="code-input">
+    <div class="code-input__frame">
+      <div class="code-input__frame__inner">
+        <pre><code
+            class="code-input javascript"
+            spellcheck="false"
+            contenteditable="true"
+              >{{codeInput}}
+          </code></pre>
       </div>
     </div>
 
-    <button class="highlight-btn">Visualizar com o highlight</button>
+    <button class="highlight-btn" (click)="highlight()">Visualizar com o highlight</button>
   </div>
 
-  <form class="code-menu">
+  <div class="code-menu">
     <div class="code-menu__container--project">
       <h2 class="code-menu__title">Seu projeto</h2>
 
@@ -32,6 +36,6 @@
     </div>
 
     <button class="code-menu__submit">Salvar projeto</button>
-  </form>
-</div>
+  </div>
+</form>
 
