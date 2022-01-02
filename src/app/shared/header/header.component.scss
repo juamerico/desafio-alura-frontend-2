@@ -79,11 +79,11 @@ app-user {
 }
 
 app-hamburger-menu {
-  position: absolute;
-  top: 10vh;
+  position: fixed;
+  top: 13vh;
   right: 2rem;
   width: auto;
-  height: 100vh;
+  height: 100%;
   transition: 450ms ease-in-out;
 
   @include desktop {
@@ -97,5 +97,6 @@ app-hamburger-menu {
 
 .active-hamburger-menu {
   transform: translateX(0);
+  position: absolute;
   left: 50%;
 }
