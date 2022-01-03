@@ -2,17 +2,17 @@
 
   <div class="code-input">
     <div class="code-input__frame">
-      <div class="code-input__frame__inner">
-        <pre><code
-            class="code-input javascript"
-            spellcheck="false"
-            contenteditable="true"
-              >{{codeInput}}
-          </code></pre>
-      </div>
+      <pre>
+        <code
+          class="code-input"
+          spellcheck="false"
+          contenteditable="true">
+            {{code}}
+        </code>
+      </pre>
     </div>
 
-    <button class="highlight-btn" (click)="highlight()">Visualizar com o highlight</button>
+    <button class="highlight-btn" (click)="highlight($event)">Visualizar com o highlight</button>
   </div>
 
   <div class="code-menu">
