@@ -1,13 +1,12 @@
 <form class="form">
 
   <div class="code-input">
-    <div class="code-input__frame">
+    <div class="code-input__frame" [style.background-color]="color">
       <pre>
         <code
           class="code-input"
           spellcheck="false"
           contenteditable="true">
-            {{code}}
         </code>
       </pre>
     </div>
@@ -32,7 +31,12 @@
         <option value="HTML">HTML</option>
       </select>
 
-      <input class="code-menu__input--color" type="color" value="#6BD1FF">
+      <input
+        class="code-menu__input--color"
+        type="color"
+        [value]="color"
+        (input)="changeColor($event)"
+        />
     </div>
 
     <button class="code-menu__submit">Salvar projeto</button>

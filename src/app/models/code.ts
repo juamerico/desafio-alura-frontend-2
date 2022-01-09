@@ -3,4 +3,6 @@ export interface Code {
   name: string
   title: string
   description: string
+  language: string
+  color: string
 }
