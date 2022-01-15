@@ -1,5 +1,5 @@
 import { HighlightJsService } from './../services/highlight-js.service';
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
@@ -7,11 +7,14 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './code-editor.component.html',
   styleUrls: ['./code-editor.component.scss']
 })
-export class CodeEditorComponent {
-
+export class CodeEditorComponent implements OnInit {
   public color: string = "#6BD1FF"
 
   constructor(private hljs: HighlightJsService, private formBuilder: FormBuilder) { }
+
+  ngOnInit(): void {
+    // this.body.nativeElement.focus()
+  }
 
   public highlight(event: Event): void {
     event.preventDefault()
