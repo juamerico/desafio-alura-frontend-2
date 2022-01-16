@@ -5,6 +5,7 @@
       <div class="code-input__mac-buttons">
         <pre>
           <code
+            appAutoFocus
             spellcheck="false"
             contenteditable="true">
           </code>
@@ -19,7 +20,7 @@
     <div class="code-menu__container--project">
       <h2 class="code-menu__title">Seu projeto</h2>
 
-      <input class="code-menu__input--name" type="text" placeholder="Nome do seu projeto"/>
+      <input class="code-menu__input--name" type="text" placeholder="Nome do seu projeto" />
       <textarea class="code-menu__input--description" type="text" placeholder="Descrição do seu projeto"></textarea>
     </div>
 
@@ -32,15 +33,9 @@
         <option value="HTML">HTML</option>
       </select>
 
-      <input
-        class="code-menu__input--color"
-        type="color"
-        [value]="color"
-        (input)="changeColor($event)"
-        />
+      <input class="code-menu__input--color" type="color" [value]="color" (input)="changeColor($event)" />
     </div>
 
     <button class="code-menu__submit">Salvar projeto</button>
   </div>
 </form>
-

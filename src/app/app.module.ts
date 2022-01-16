@@ -1,4 +1,3 @@
-import { HamburgerMenuModule } from './shared/hamburger-menu/hamburger-menu.module';
 import { CommunityModule } from './community/community.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationMenuModule } from './shared/navigation-menu/navigation-menu.module';
