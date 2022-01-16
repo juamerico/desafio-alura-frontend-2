@@ -1,49 +1,50 @@
 @import "variables";
 
-.co__frame {
-  @include desktop {
-    width: 100%;
-    height: 100%;
-  }
-
-  height: 50vh;
-  background-color: $frame-color;
-  border-radius: 8px;
+.code-output {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  height: auto;
+  width: 100%;
 
-  &__inner {
-    width: 90%;
-    height: 85%;
+  &__frame {
+    max-width: 100%;
+    height: 40rem;
+    background-color: $frame-color;
     border-radius: 8px;
-    background-color: $frame-inner-color;
-
     display: flex;
     align-items: center;
     justify-content: center;
   }
+
+  &__mac-buttons {
+    width: 90%;
+    height: 85%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: url("../../../assets/mac_buttons.svg") no-repeat;
+    background-position: left 1rem top 1rem;
+    background-color: $frame-inner-color;
+  }
 }
 
 pre {
-  width: 100%;
-  height: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background: url("../../../assets/mac_buttons.svg") no-repeat;
-  background-position: left 1rem top 1rem;
+  width: 100%;
+  height: 95%;
   overflow: scroll;
   word-break: break-all;
-  white-space: pre-wrap;
+  white-space: normal;
 }
 
-.code-output {
+code {
   width: 98%;
-  height: 85%;
-  margin-bottom: 0.5rem;
+  height: 92%;
   font-family: $code-font;
   color: $text-color;
   font-size: 1.4rem;
   outline: none;
+  line-height: normal;
 }
