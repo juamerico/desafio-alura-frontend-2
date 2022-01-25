@@ -7,10 +7,6 @@ const routes: Routes = [
   {
     path: "",
     pathMatch: "full",
-    redirectTo: "code-editor"
-  },
-  {
-    path: "code-editor",
     component: CodeEditorComponent
   },
   {

@@ -108,9 +108,21 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "desafio-frontend-edicao2"
+  "defaultProject": "desafio-frontend-edicao2",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
