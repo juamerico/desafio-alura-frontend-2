@@ -1,10 +1,12 @@
-<form class="form">
+<form class="form" #form="ngForm" (ngSubmit)="onFormSubmit(form)" autocomplete="off">
 
   <div class="code-input">
     <div class="code-input__frame" [style.background-color]="color">
       <div class="code-input__mac-buttons">
         <pre>
           <code
+            #code
+            required
             appAutoFocus
             spellcheck="false"
             contenteditable="true">
@@ -13,29 +15,32 @@
       </div>
     </div>
 
-    <button class="highlight-btn" (click)="highlight($event)">Visualizar com o highlight</button>
+    <button class="highlight-btn" (click)="highlight($event, language.value)">Visualizar com o
+      highlight</button>
   </div>
 
   <div class="code-menu">
     <div class="code-menu__container--project">
       <h2 class="code-menu__title">Seu projeto</h2>
 
-      <input class="code-menu__input--name" type="text" placeholder="Nome do seu projeto" />
-      <textarea class="code-menu__input--description" type="text" placeholder="Descrição do seu projeto"></textarea>
+      <input ngModel name="title" class="code-menu__input--name" type="text" placeholder="Nome do seu projeto" />
+      <textarea ngModel name="description" class="code-menu__input--description" type="text"
+        placeholder="Descrição do seu projeto"></textarea>
     </div>
 
     <div class="code-menu__container--personalization">
       <h2 class="code-menu__title">Personalização</h2>
 
-      <select class="code-menu__input--language">
-        <option value="JavaScript">JavaScript</option>
-        <option value="CSS">CSS</option>
-        <option value="HTML">HTML</option>
+      <select #language ngModel name="language" class="code-menu__input--language">
+        <option value="javascript">JavaScript</option>
+        <option value="css">CSS</option>
+        <option value="html">HTML</option>
       </select>
 
-      <input class="code-menu__input--color" type="color" [value]="color" (input)="changeColor($event)" />
+      <input #colorInput ngModel name="color" class="code-menu__input--color" type="color" [value]="color"
+        (input)="changeColor(colorInput)" />
     </div>
 
-    <button class="code-menu__submit">Salvar projeto</button>
+    <button type="submit" class="code-menu__submit">Salvar projeto</button>
   </div>
 </form>

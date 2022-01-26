@@ -1,27 +1,39 @@
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 import { HighlightJsService } from './../services/highlight-js.service';
-import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-code-editor',
   templateUrl: './code-editor.component.html',
   styleUrls: ['./code-editor.component.scss']
 })
-export class CodeEditorComponent implements OnInit {
-  public color: string = "#6BD1FF"
+export class CodeEditorComponent implements AfterViewInit {
+  public color: string = "#6bd1ff"
+  @ViewChild("colorInput") colorInput!: ElementRef
+  @ViewChild("code") code!: ElementRef
+  @ViewChild("language") language!: ElementRef
 
-  constructor(private hljs: HighlightJsService, private formBuilder: FormBuilder) { }
-
-  ngOnInit(): void {
-    // this.body.nativeElement.focus()
+  constructor(private hljs: HighlightJsService) {
   }
 
-  public highlight(event: Event): void {
+  ngAfterViewInit(): void {
+    this.colorInput.nativeElement.value = this.color
+  }
+
+  public highlight(event: Event, language: string): void {
     event.preventDefault()
+    const code = this.code.nativeElement.textContent
     this.hljs.highlighText()
   }
 
-  public changeColor(event: Event): void {
-    this.color = (<HTMLInputElement>event.target).value
+  public onFormSubmit(form: NgForm) {
+    console.log("FORM: ", form)
+    console.log("FORM.VALUE: ", form.value)
+  }
+
+  public changeColor(colorInput: HTMLInputElement): void {
+    this.color = colorInput.value
+    console.log(colorInput.value)
   }
 }
