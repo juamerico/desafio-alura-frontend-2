@@ -1,1 +1,1 @@
-https://juamerico.github.io/desafio-alura-frontend-2/
+https://romantic-johnson-345867.netlify.app/code-editor
