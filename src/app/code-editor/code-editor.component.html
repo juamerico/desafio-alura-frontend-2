@@ -1,4 +1,4 @@
-<form class="form" #form="ngForm" (ngSubmit)="onFormSubmit(form)" autocomplete="off">
+<form class="form" #form="ngForm" (ngSubmit)="saveProject(form)" autocomplete="off">
 
   <div class="code-input">
     <div class="code-input__frame" [style.background-color]="color">
@@ -6,7 +6,7 @@
         <pre>
           <code
             [class]="language.value"
-            #code
+            #body
             required
             appAutoFocus
             spellcheck="false"
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <button class="highlight-btn" (click)="highlight($event, language.value)">Visualizar com o
+    <button class="highlight-btn" (click)="highlight($event)">Visualizar com o
       highlight</button>
   </div>
 
