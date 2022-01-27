@@ -5,6 +5,7 @@
       <div class="code-input__mac-buttons">
         <pre>
           <code
+            [class]="language.value"
             #code
             required
             appAutoFocus
@@ -32,9 +33,9 @@
       <h2 class="code-menu__title">Personalização</h2>
 
       <select #language ngModel name="language" class="code-menu__input--language">
-        <option value="javascript">JavaScript</option>
-        <option value="css">CSS</option>
-        <option value="html">HTML</option>
+        <option value="language-javascript">JavaScript</option>
+        <option value="language-css">CSS</option>
+        <option value="language-html">HTML</option>
       </select>
 
       <input #colorInput ngModel name="color" class="code-menu__input--color" type="color" [value]="color"
