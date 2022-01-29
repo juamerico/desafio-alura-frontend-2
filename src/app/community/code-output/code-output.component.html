@@ -1,10 +1,11 @@
 <div class="code-output">
-  <div class="code-output__frame">
+  <div class="code-output__frame" [style.background-color]="color">
     <div class="code-output__mac-buttons">
       <pre>
         <code
+          [highlight]="body"
+          [class]="language"
           spellcheck="false">
-            {{ body }}
         </code>
       </pre>
     </div>

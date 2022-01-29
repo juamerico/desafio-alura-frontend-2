@@ -1,3 +1,4 @@
+import { HighlightJsService } from './../services/highlight-js.service';
 import { Component, OnInit } from '@angular/core';
 
 import { ProjectService } from './../services/project.service';
@@ -13,10 +14,10 @@ export class CommunityComponent implements OnInit {
 
   public projects!: any[]
 
-  constructor(private project: ProjectService) { }
+  constructor(private project: ProjectService, private hljs: HighlightJsService) { }
 
   ngOnInit() {
     this.projects = this.project.fromLocalStorage()
-    console.log(typeof this.projects)
+    this.hljs.highlighText()
   }
 }

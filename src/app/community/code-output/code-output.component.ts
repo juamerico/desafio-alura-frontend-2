@@ -8,6 +8,8 @@ import { Component, Input } from '@angular/core';
 })
 export class CodeOutputComponent {
   @Input() public body!: string
+  @Input() public language!: string
+  @Input() public color!: string
 
   constructor() { }
 
