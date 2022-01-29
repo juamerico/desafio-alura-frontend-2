@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -8,27 +9,13 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-  public userName!: string
-  public avatar_url: string = "https://placekitten.com/200/200"
+
+  public user!: User
 
   constructor(private userService: UserService) { }
 
   ngOnInit(): void {
-    //const githubUserName = prompt("Qual seu nome de usuário no Github?")
-    const githubUserName = " "
-
-    if (!githubUserName || !githubUserName.trim()) {
-      this.userName = "Anônimo(a)"
-    } else {
-      this.userService.apiCall(githubUserName.trim())
-        .subscribe((res: User) => {
-          this.userName = res["name"]
-          this.avatar_url = res["avatar_url"]
-        },
-          (error: Error) => {
-            console.log(error)
-          })
-    }
+    this.user = this.userService.user
   }
 
 }
