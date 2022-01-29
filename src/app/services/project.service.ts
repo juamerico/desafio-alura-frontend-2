@@ -10,14 +10,6 @@ export class ProjectService {
 
   constructor() { }
 
-  private toLocalStorage(project: any): void {
-    localStorage.setItem(project["id"], JSON.stringify(project))
-  }
-
-  private generateId(): number {
-    return localStorage.length + 1
-  }
-
   public generateProject(code: Code): void {
     const project = {
       id: this.generateId(),
@@ -31,5 +23,26 @@ export class ProjectService {
     console.log("PROJECT: ", project)
 
     this.toLocalStorage(project)
+  }
+
+  public fromLocalStorage() {
+    const projects = []
+
+    if (localStorage.length > 0) {
+      for (let i = 1; i <= localStorage.length; i++) {
+        const item = JSON.parse(localStorage.getItem(<string><unknown>i) || "{}")
+        projects.push(item)
+      }
+    }
+
+    return projects
+  }
+
+  private toLocalStorage(project: any): void {
+    localStorage.setItem(project["id"], JSON.stringify(project))
+  }
+
+  private generateId(): number {
+    return localStorage.length + 1
   }
 }

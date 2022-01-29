@@ -1,17 +1,14 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { Code } from 'src/app/models/code';
+import { Component, Input } from '@angular/core';
+
 
 @Component({
   selector: 'app-code-output',
   templateUrl: './code-output.component.html',
   styleUrls: ['./code-output.component.scss']
 })
-export class CodeOutputComponent implements OnInit {
-  public codeOutput = "Teste!"
+export class CodeOutputComponent {
+  @Input() public body!: string
 
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }

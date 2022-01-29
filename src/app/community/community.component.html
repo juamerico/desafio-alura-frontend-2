@@ -1,11 +1,11 @@
-<ng-template>
+<div *ngIf="projects.length > 0">
   <div class="container">
-    <div class="card">
-      <app-code-output class="card__body"></app-code-output>
+    <div class="card" *ngFor="let p of projects">
+      <app-code-output class="card__body" [body]="p.body"></app-code-output>
 
       <div class="project">
-        <h3 class="project__title">{{ title }}</h3>
-        <p class="project__description">{{ description }}</p>
+        <h3 class="project__title">{{ p.title }}</h3>
+        <p class="project__description">{{ p.description }}</p>
 
         <div class="social">
           <div class="social__group">
@@ -20,4 +20,8 @@
       </div>
     </div>
   </div>
-</ng-template>
+</div>
+
+<div class="project__title" *ngIf="projects.length === 0">
+  Nenhum projeto para exibir.
+</div>

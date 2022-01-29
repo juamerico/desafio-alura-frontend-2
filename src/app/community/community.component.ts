@@ -1,19 +1,22 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ProjectService } from './../services/project.service';
+
 @Component({
   selector: 'app-community',
   templateUrl: './community.component.html',
   styleUrls: ['./community.component.scss']
 })
 export class CommunityComponent implements OnInit {
-  public title = "Título do projeto"
-  public description = "Descrição do projeto"
   public likes = 0
   public comments = 0
 
-  constructor() { }
+  public projects!: any[]
 
-  ngOnInit(): void {
+  constructor(private project: ProjectService) { }
+
+  ngOnInit() {
+    this.projects = this.project.fromLocalStorage()
+    console.log(typeof this.projects)
   }
-
 }
