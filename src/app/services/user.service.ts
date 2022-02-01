@@ -21,11 +21,8 @@ export class UserService {
     const githubUserName = prompt("Qual seu nome de usuário no Github?")
     //const githubUserName = this.user.name
 
-    if (!githubUserName || !githubUserName.trim()) {
-      this.user.name = "Anônimo(a)"
-
-    } else {
-      this.apiCall(githubUserName.trim())
+    if (githubUserName || githubUserName!.trim()) {
+      this.apiCall(githubUserName!.trim())
         .subscribe((res: User) => {
           this.user.name = res["name"]
           this.user.avatar_url = res["avatar_url"]
