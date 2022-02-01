@@ -25,7 +25,7 @@ export class ProjectService {
     this.toLocalStorage(project)
   }
 
-  public fromLocalStorage() {
+  public fromLocalStorage(): any[] {
     const projects = []
 
     if (localStorage.length > 0) {

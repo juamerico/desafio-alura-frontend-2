@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { User } from '../models/user';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -17,7 +18,7 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getUser() {
+  public getUser(): void {
     const githubUserName = prompt("Qual seu nome de usuário no Github?")
     //const githubUserName = this.user.name
 

@@ -1,6 +1,6 @@
-import { HighlightJsService } from './../services/highlight-js.service';
 import { Component, OnInit } from '@angular/core';
 
+import { HighlightJsService } from './../services/highlight-js.service';
 import { ProjectService } from './../services/project.service';
 
 @Component({

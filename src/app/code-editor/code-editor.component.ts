@@ -5,6 +5,7 @@ import { Code } from '../models/code';
 import { ProjectService } from './../services/project.service';
 import { HighlightJsService } from './../services/highlight-js.service';
 
+
 @Component({
   selector: 'app-code-editor',
   templateUrl: './code-editor.component.html',
